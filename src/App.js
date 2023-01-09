@@ -1,6 +1,7 @@
 import './App.css';
 import React, { Component } from 'react';
 import Timer from './Timer'
+import CustomNotification from './CustomNotification'
 
 class App extends Component {
 
@@ -8,8 +9,9 @@ class App extends Component {
     return (
     <div className="App">
       <header className="App-header">
-        <Timer name="Focus Time"></Timer>
+        <CustomNotification text="Hello World" show={false}></CustomNotification>
       </header>
+      <Timer name="Focus Time"></Timer>
     </div>
     );
   };
