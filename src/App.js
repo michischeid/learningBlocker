@@ -8,7 +8,7 @@ class App extends Component {
     return (
     <div className="App">
       <header className="App-header">
-        <Timer></Timer>
+        <Timer name="Focus Time"></Timer>
       </header>
     </div>
     );
