@@ -1,4 +1,5 @@
 import { Component } from "react";
+import '../../node_modules/bootstrap/dist/css/bootstrap.min.css'
 
 export default class Timer extends Component{
     constructor(props){
@@ -48,6 +49,8 @@ export default class Timer extends Component{
         this.setState ({timeSetMin:event.target.value});
     }
     
+
+    //bootstrap style wird nicht angenommen
     render (){
         return(
             <div>
@@ -55,9 +58,9 @@ export default class Timer extends Component{
             <input type="number" value={this.state.timeSetMin} onChange={this.handleTimeSetMin}></input>
             </label>
             <br/>
-            <button onClick={this.startTimer}>Start</button>            
-            <button onClick={this.pause}>Pause</button>
-            <button onClick={this.stopTimer}>Reset</button>
+            <button class="btn btn-primary" onClick={this.startTimer}>Start</button>            
+            <button class="btn btn-primary" onClick={this.pause}>Pause</button>
+            <button class="btn btn-primary" onClick={this.stopTimer}>Reset</button>
             <strong> Time Left: {this.state.timeLeftSec /60 |0}min {this.state.timeLeftSec % 60}s  </strong>
             </div>
         );
